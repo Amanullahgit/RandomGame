@@ -1,16 +1,56 @@
-# random_quiz
+**GitHub Repository for Flutter Random Game Project**
 
-A new Flutter project.
+### Project Overview
+This Flutter project is a simple quiz game where users are challenged to guess a random number within a specified time limit. The game includes features such as a countdown timer, display cards for information, and buttons for starting, attempting, and resetting the game.
 
-## Getting Started
+### Developer Information
+- **Developer:** Amanullah Bahram
 
-This project is a starting point for a Flutter application.
+### Project Structure
+The project is organized into multiple Dart files to enhance modularity and readability:
 
-A few resources to get you started if this is your first Flutter project:
+1. **main.dart:** The entry point of the application, defining the main `MyApp` widget.
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+2. **home.dart:** Contains the `HomePage` widget, which serves as the main screen of the quiz game. It includes various components like display cards, circular timer, and custom buttons.
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+3. **displayCard.dart:** Defines the `DisplayCard` widget, responsible for displaying information in a card format. The card type determines the card's appearance.
+
+4. **customButton.dart:** Implements the `CustomStartButton` widget, creating a custom-styled button with a specified title and onPressed function.
+
+5. **circularTimer.dart:** Provides the `CircularTimer` widget, utilizing the `circular_countdown_timer` package to display a circular countdown timer.
+
+6. **GameModel.dart:** Represents the game's data model, extending `ChangeNotifier` for state management. It includes methods for resetting, starting, and checking results, as well as a timer for tracking game duration.
+
+7. **GameController.dart:** Manages the game's logic, utilizing the `GameModel` for data manipulation. It includes methods for resetting the game, starting the game, checking results, and handling timeouts.
+
+8. **pubspec.yaml:** Specifies project details, dependencies, and version information.
+
+### How to Run the Project
+To run this Flutter project locally, follow these steps:
+
+1. Ensure you have Flutter and Dart installed on your machine.
+
+2. Clone the repository:
+   ```bash
+   git clone [repository_link]
+   ```
+
+3. Navigate to the project directory:
+   ```bash
+   cd random_quiz
+   ```
+
+4. Run the project using Flutter:
+   ```bash
+   flutter run
+   ```
+
+### Additional Notes
+- Make sure to check the [pubspec.yaml](pubspec.yaml) file for project dependencies.
+- Feel free to explore and customize the code according to your preferences.
+
+### Feedback and Contributions
+If you have any feedback or suggestions, feel free to open an issue or submit a pull request. Contributions are always welcome!
+
+### License
+This project is licensed under the [MIT License](LICENSE). See the [LICENSE](LICENSE) file for more details.
