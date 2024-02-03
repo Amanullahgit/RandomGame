@@ -6,6 +6,9 @@ This Flutter project is a simple quiz game where users are challenged to guess a
 ### Developer Information
 - **Developer:** Amanullah Bahram
 
+<img src="https://github.com/Amanullahgit/RandomGame/assets/41961773/069c63f6-15b6-4374-af46-cc1e9e9f6fed" width="480" height="800" />
+
+
 ### Project Structure
 The project is organized into multiple Dart files to enhance modularity and readability:
 
