@@ -1,28 +1,43 @@
 import 'dart:async';
-import 'dart:math';
 
-import 'package:circular_countdown_timer/circular_countdown_timer.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:random_quiz/Home/home.dart';
+import 'Home/home.dart';
+import 'package:lottie/lottie.dart';
 
 void main() {
-  runApp(const MaterialApp(home: MyApp()));
+  runApp(MaterialApp(
+    home: SplashScreen(),
+    debugShowCheckedModeBanner: false,
+  ));
 }
 
-class MyApp extends StatefulWidget {
-  const MyApp({Key? key}) : super(key: key);
-
+class SplashScreen extends StatefulWidget {
   @override
-  State<MyApp> createState() => _MyAppState();
+  _SplashScreenState createState() => _SplashScreenState();
 }
 
-class _MyAppState extends State<MyApp> {
+class _SplashScreenState extends State<SplashScreen> {
+  @override
+  void initState() {
+    super.initState();
+    Timer(
+      Duration(seconds: 5),
+      () {
+        Navigator.of(context).pushReplacement(
+          MaterialPageRoute(
+            builder: (BuildContext context) => HomePage(),
+          ),
+        );
+      },
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(
-          title: const Text('Flutter Demo'),
-        ),
-        body: const HomePage());
+      body: Lottie.asset('assets/loading.json',
+          fit: BoxFit.fill, height: double.infinity),
+    );
   }
 }

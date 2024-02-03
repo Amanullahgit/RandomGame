@@ -14,9 +14,12 @@ class CustomStartButton extends StatelessWidget {
       child: ElevatedButton(
         onPressed: () => onPressed(),
         style: ButtonStyle(
-          backgroundColor: MaterialStateProperty.all(Colors.blue),
+          backgroundColor: MaterialStateProperty.all(Colors.lightBlue.shade300),
         ),
-        child: Text(title),
+        child: Text(
+          title,
+          style: TextStyle(color: Colors.black),
+        ),
       ),
     );
   }
